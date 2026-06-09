@@ -31,21 +31,17 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        
         {colaboradores.map((colaborador) => (
           <CardData.Root key={colaborador.id}>
             <CardData.Header text="Colaboradores" />
             <CardData.Content text={[colaborador]} />
-            <CardData.Action
-              actions={
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  Editar
-                </button>
-              }
-            />
+            <CardData.Actions>
+              <CardData.Action action="Editar" />
+              <CardData.Action action="Excluir" />
+            </CardData.Actions>
           </CardData.Root>
         ))}
-        
+
         <CardData.Root>
           <CardData.Header text="Colaboradores" />
           <CardData.Content text={colaboradores} />
