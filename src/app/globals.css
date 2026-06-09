@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  /* Forçando as cores do seu sistema para ignorar o tema do sistema operacional */
+  --background: #030712; /* Fundo da tela (Slate 950) */
+  --foreground: #f3f4f6; /* Texto claro (Gray 100) */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
